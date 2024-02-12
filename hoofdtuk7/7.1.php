@@ -20,6 +20,28 @@ Bedrag exclusief BTW <input type="tekst" name="bedrag" value="" placeholder="vul
 <?php
     //auteur: Dylan Mahn
     //var_dump($_POST);
+
+    //var_dump($_POST);
+    if (isset($_POST['bedrag']) == true &&
+     string$_POST['bedrag'] > 0 &&
+     filter_var($_POST['bedrag'], FILTER_VALIDATE_FLOAT)){
+        echo "het poste bedrag is: " . $_POST['bedrag'] . "<br>";
+
+//check of btw is aangeklikt
+    if (isset($_POST['BTW']) == true) {
+        //breken btw
+        echo "uitkomst btw-berekening"
+    } else {
+        echo "BTW niet aangeklikt<br>";
+    }
+
+    } else {
+        echo "Error: bedrag is niet ingevuld<br>";
+    }
+
+
+
+
   if (isset($_POST['bedrag']) == true) {
 
     //test of getal is
