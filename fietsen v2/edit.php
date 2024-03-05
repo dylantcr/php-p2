@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $type = htmlspecialchars($_POST["type"]);
     $prijs = intval($_POST["prijs"]); 
  
-    $sql = "UPDATE Fietsenmaker SET merk = :merk, type = :type, prijs = :prijs WHERE id = :id";
+    $sql = "UPDATE fietsen SET merk = :merk, type = :type, prijs = :prijs WHERE id = :id";
     $stmt = $conn->prepare($sql); 
     $stmt->bindParam(':merk', $merk); 
     $stmt->bindParam(':type', $type); 
@@ -68,13 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
  
-<h2>Bewerk Fiets</h2> <!-- Dit is een kop met de tekst 'Bewerk Fiets' -->
+<h2>Bewerk Fiets</h2>
  
-<form action="" method="post"> <!-- Dit opent een formulier dat gegevens naar dezelfde pagina verzendt met de POST-methode -->
-<imput type="hidden" id="merk" name="id" required value="<?php echo $resuld ['id']; ?>"><br> <!-- Dit is een verborgen invoerveld voor de fiets-ID -->
-<label for="merk">Merk:</label> <!-- Dit is een label voor het invoerveld 'Merk' -->
-    <input type="text" id="merk" name="merk" value="<?php echo $fiets['merk']; ?>" required><br> <!-- Dit is een invoerveld voor de merknaam van de fiets -->
- 
+<form action="" method="post">
+
+<label for="merk">Merk:</label> 
+    <input type="text" id="merk" name="merk" value="<?php echo $fiets['merk']; ?>" required><br> 
     <label for="type">Type:</label> <!-- Dit is een label voor het invoerveld 'Type' -->
     <input type="text" id="type" name="type" value="<?php echo $fiets['type']; ?>" required><br> <!-- Dit is een invoerveld voor het type van de fiets -->
  
