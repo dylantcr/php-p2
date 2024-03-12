@@ -1,9 +1,9 @@
 <?php
-// auteur: Dylan
+// auteur: D.Mahn
 // functie: configuratiebestand
 
 //namen geven
-define("DATABASE", "brouwer");
+define("DATABASE", "bieren");
 define("SERVERNAME", "localhost");
 define("USERNAME", "root");
 define("PASSWORD", "");

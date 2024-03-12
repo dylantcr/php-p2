@@ -1,7 +1,7 @@
 <?php
     // functie: update brouwer
-    // auteur: Wigmans
-
+    // auteur: D.Mahn
+    
     require_once('functions.php');
 
     // Test of er op de wijzig-knop is gedrukt 
@@ -15,11 +15,11 @@
         }
     }
 
-    // Test of id is meegegeven in de URL
-    if(isset($_GET['id'])){  
-        // Haal alle info van de betreffende id $_GET['id']
-        $id = $_GET['id'];
-        $row = getbrouwer($id);
+    // Test of brouwcode is meegegeven in de URL
+    if(isset($_GET['brouwcode'])){  
+        // Haal alle info van de betreffende brouwcode $_GET['brouwcode']
+        $brouwcode = $_GET['brouwcode'];
+        $row = getbrouwer($brouwcode);
     
 ?>
 
@@ -27,7 +27,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="wbrouwcodeth=device-wbrouwcodeth, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Wijzig brouwer</title>
 </head>
@@ -35,15 +35,12 @@
   <h2>Wijzig brouwer</h2>
   <form method="post">
     
-    <input type="hidden" id="merk" name="id" required value="<?php echo $row['id']; ?>"><br>
-    <label for="merk">Merk:</label>
-    <input type="text" id="merk" name="merk" required value="<?php echo $row['merk']; ?>"><br>
+    <input type="hidden" brouwcode="naam" name="brouwcode" required value="<?php echo $row['brouwcode']; ?>"><br>
+    <label for="naam">naam:</label>
+    <input type="text" brouwcode="naam" name="naam" required value="<?php echo $row['naam']; ?>"><br>
 
-    <label for="type">Type:</label>
-    <input type="text" id="type" name="type" required value="<?php echo $row['type']; ?>"><br>
-
-    <label for="prijs">Prijs:</label>
-    <input type="number" id="prijs" name="prijs" required value="<?php echo $row['prijs']; ?>"><br>
+    <label for="type">land:</label>
+    <input type="text" brouwcode="land" name="land" required value="<?php echo $row['land']; ?>"><br>
 
     <input type="submit" name="btn_wzg" value="Wijzig">
   </form>
@@ -54,6 +51,6 @@
 
 <?php
     } else {
-        "Geen id opgegeven<br>";
+        "Geen brouwcode opgegeven<br>";
     }
 ?>

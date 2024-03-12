@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: D.Mahn
 // functie: algemene functies tbv hergebruik
 
 include_once "config.php";
@@ -43,15 +43,15 @@ include_once "config.php";
     return $result;
  }
 
- // selecteer de rij van de opgeven id uit de table brouwer
- function getbrouwer($id){
+ // selecteer de rij van de opgeven brouwcode uit de table brouwer
+ function getbrouwer($brouwcode){
     // Connect database
     $conn = connectDb();
 
     // Select data uit de opgegeven table methode prepare
-    $sql = "SELECT * FROM " . CRUD_TABLE . " WHERE id = :id";
+    $sql = "SELECT * FROM " . CRUD_TABLE . " WHERE brouwcode = :brouwcode";
     $query = $conn->prepare($sql);
-    $query->execute([':id'=>$id]);
+    $query->execute([':brouwcode'=>$brouwcode]);
     $result = $query->fetch();
 
     return $result;
@@ -146,13 +146,13 @@ function printCrudbrouwer($result){
         
         // Wijzig knopje
         $table .= "<td>
-            <form method='post' action='update_brouwer.php?id=$row[id]' >       
+            <form method='post' action='update_brouwer.php?brouwcode=$row[brouwcode]' >       
                 <button>Wzg</button>	 
             </form></td>";
 
         // Delete knopje
         $table .= "<td>
-            <form method='post' action='delete_brouwer.php?id=$row[id]' >       
+            <form method='post' action='delete_brouwer.php?brouwcode=$row[brouwcode]' >       
                 <button>Verwijder</button>	 
             </form></td>";
 
@@ -172,20 +172,17 @@ function updatebrouwer($row){
     // Maak een query 
     $sql = "UPDATE " . CRUD_TABLE .
     " SET 
-        merk = :merk, 
-        type = :type, 
-        prijs = :prijs
-    WHERE id = :id
+        naam = :naam, 
+        land = :land, 
+    WHERE brouwcode = :brouwcode
     ";
 
     // Prepare query
     $stmt = $conn->prepare($sql);
     // Uitvoeren
     $stmt->execute([
-        ':merk'=>$row['merk'],
-        ':type'=>$row['type'],
-        ':prijs'=>$row['prijs'],
-        ':id'=>$row['id']
+        ':naam'=>$row['naam'],
+        ':land'=>$row['land'],
     ]);
 
     // test of database actie is gelukt
@@ -199,17 +196,17 @@ function insertbrouwer($post){
 
     // Maak een query 
     $sql = "
-        INSERT INTO " . CRUD_TABLE . " (merk, type, prijs)
-        VALUES (:merk, :type, :prijs) 
+        INSERT INTO " . CRUD_TABLE . " (naam, land)
+        VALUES (:naam, :land) 
     ";
 
     // Prepare query
     $stmt = $conn->prepare($sql);
     // Uitvoeren
     $stmt->execute([
-        ':merk'=>$_POST['merk'],
-        ':type'=>$_POST['type'],
-        ':prijs'=>$_POST['prijs']
+        ':naam'=>$_POST['naam'],
+        ':land'=>$_POST['land'],
+
     ]);
 
     
@@ -218,7 +215,7 @@ function insertbrouwer($post){
     return $retVal;  
 }
 
-function deletebrouwer($id){
+function deletebrouwer($brouwcode){
 
     // Connect database
     $conn = connectDb();
@@ -226,14 +223,14 @@ function deletebrouwer($id){
     // Maak een query 
     $sql = "
     DELETE FROM " . CRUD_TABLE . 
-    " WHERE id = :id";
+    " WHERE brouwcode = :brouwcode";
 
     // Prepare query
     $stmt = $conn->prepare($sql);
 
     // Uitvoeren
     $stmt->execute([
-    ':id'=>$_GET['id']
+    ':brouwcode'=>$_GET['brouwcode']
     ]);
 
     // test of database actie is gelukt

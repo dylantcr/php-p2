@@ -1,6 +1,6 @@
 <?php
     // functie: formulier en database insert brouwer
-    // auteur: Wigmans
+    // auteur: D.Mahn
 
     echo "<h1>Insert brouwer</h1>";
 
@@ -21,14 +21,11 @@
     <body>
         <form method="post">
 
-        <label for="merk">Merk:</label>
-        <input type="text" id="merk" name="merk" required><br>
+        <label for="naam">naam:</label>
+        <input land="text" brouwcode="naam" name="naam" required><br>
 
-        <label for="type">Type:</label>
-        <input type="text" id="type" name="type" required><br>
-
-        <label for="prijs">Prijs:</label>
-        <input type="number" id="prijs" name="prijs" required><br>
+        <label for="type">land:</label>
+        <input type="text" brouwcode="land" name="land" required><br>
 
         <input type="submit" name="btn_ins" value="Insert">
         </form>
