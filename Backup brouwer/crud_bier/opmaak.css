@@ -1,0 +1,18 @@
+label{
+    display: inline-block;
+    background-color:#839EFF;
+    width: 10%;
+}
+
+table, th, td {
+    background-color: #839EFF;
+    border: 2px solid black;
+}
+
+th{
+    background-color: #839EFF;    
+}
+
+body{
+    background-color: #839EFF;
+}

@@ -18,7 +18,6 @@
     }
 ?>
 <html>
-<link rel="stylesheet" href="opmaak.css">
     <body>
         <form method="post">
 
@@ -29,12 +28,8 @@
         <input type="text" biercode="soort" name="soort" required><br>
 
         <label for="stijl">stijl:</label>
-        <input type="text" biercode="stijl" name="stijl" required><br>
+        <input type="number" biercode="stijl" name="stijl" required><br>
 
-        <label for="alcohol">alcohol:</label>
-        <input type="text" biercode="alcohol" name="alcohol" required><br>
-
-  
         <input type="submit" name="btn_ins" value="Insert">
         </form>
         

@@ -174,9 +174,7 @@ function updatebier($row){
     " SET 
         naam = :naam, 
         soort = :soort, 
-        stijl = :stijl,
-        alcohol = :alcohol,
-        brouwcode = :brouwcode
+        stijl = :stijl
     WHERE biercode = :biercode
     ";
 
@@ -187,8 +185,6 @@ function updatebier($row){
         ':naam'=>$row['naam'],
         ':soort'=>$row['soort'],
         ':stijl'=>$row['stijl'],
-        ':alcohol'=>$row['alcohol'],
-        ':brouwcode'=>$row['brouwcode'],
         ':biercode'=>$row['biercode']
     ]);
 
@@ -203,8 +199,8 @@ function insertbier($post){
 
     // Maak een query 
     $sql = "
-        INSERT INTO " . CRUD_TABLE . " (naam, soort, stijl, alcohol, brouwcode)
-        VALUES (:naam, :soort, :stijl, :alcohol, brouwcode)
+        INSERT INTO " . CRUD_TABLE . " (naam, soort, stijl)
+        VALUES (:naam, :soort, :stijl) 
     ";
 
     // Prepare query
@@ -213,8 +209,7 @@ function insertbier($post){
     $stmt->execute([
         ':naam'=>$_POST['naam'],
         ':soort'=>$_POST['soort'],
-        ':stijl'=>$_POST['stijl'],
-        ':alcohol'=>$_POST['alcohol'],
+        ':stijl'=>$_POST['stijl']
     ]);
 
     

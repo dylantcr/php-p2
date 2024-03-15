@@ -10,7 +10,7 @@
 
     <?php
     // functie: Programma CRUD bier
-    // auteur: D.Mahn
+    // auteur: Wigmans   
 
     // Initialisatie
     include 'functions.php';
