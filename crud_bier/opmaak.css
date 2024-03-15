@@ -6,9 +6,13 @@ label{
 
 table, th, td {
     background-color: #839EFF;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 th{
-    background-color: grey;    
+    background-color: #839EFF;    
+}
+
+body{
+    background-color: #839EFF;
 }
