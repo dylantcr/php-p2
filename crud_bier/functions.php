@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: D.mahn
 // functie: algemene functies tbv hergebruik
 
 include_once "config.php";
@@ -244,6 +244,20 @@ function deletebier($biercode){
     // test of database actie is gelukt
     $retVal = ($stmt->rowCount() == 1) ? true : false ;
     return $retVal;
+}
+
+function dropDownbrouwer(){
+ 
+    $values = getData('brouwer');
+   
+    $text = "choose a brouwcode: <select name='brouwcode'>" ;
+       
+        foreach ($values as $value) {
+        $text .= "<option value='" . $value['brouwcode'] . "'>" . $value['naam'] . "</option>";
+    }
+   
+    $text .= "</select>";
+    echo $text;
 }
 
 ?>

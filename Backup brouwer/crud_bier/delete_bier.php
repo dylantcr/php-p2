@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: D.Mahn
 // functie: verwijder een bier op basis van de biercode
 include 'functions.php';
 

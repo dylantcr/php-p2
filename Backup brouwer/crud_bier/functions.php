@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: D.mahn
 // functie: algemene functies tbv hergebruik
 
 include_once "config.php";
@@ -174,7 +174,9 @@ function updatebier($row){
     " SET 
         naam = :naam, 
         soort = :soort, 
-        stijl = :stijl
+        stijl = :stijl,
+        alcohol = :alcohol,
+        brouwcode = :brouwcode
     WHERE biercode = :biercode
     ";
 
@@ -185,6 +187,8 @@ function updatebier($row){
         ':naam'=>$row['naam'],
         ':soort'=>$row['soort'],
         ':stijl'=>$row['stijl'],
+        ':alcohol'=>$row['alcohol'],
+        ':brouwcode'=>$row['brouwcode'],
         ':biercode'=>$row['biercode']
     ]);
 
@@ -199,8 +203,8 @@ function insertbier($post){
 
     // Maak een query 
     $sql = "
-        INSERT INTO " . CRUD_TABLE . " (naam, soort, stijl)
-        VALUES (:naam, :soort, :stijl) 
+        INSERT INTO " . CRUD_TABLE . " (naam, soort, stijl, alcohol, brouwcode)
+        VALUES (:naam, :soort, :stijl, :alcohol, brouwcode)
     ";
 
     // Prepare query
@@ -209,7 +213,8 @@ function insertbier($post){
     $stmt->execute([
         ':naam'=>$_POST['naam'],
         ':soort'=>$_POST['soort'],
-        ':stijl'=>$_POST['stijl']
+        ':stijl'=>$_POST['stijl'],
+        ':alcohol'=>$_POST['alcohol'],
     ]);
 
     

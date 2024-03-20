@@ -1,6 +1,6 @@
 <?php
     // functie: update bier
-    // auteur: Wigmans
+    // auteur: D.Mahn
 
     require_once('functions.php');
 
@@ -30,6 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Wijzig bier</title>
+  <link rel="stylesheet" href="opmaak.css">
 </head>
 <body>
   <h2>Wijzig bier</h2>
@@ -43,7 +44,13 @@
     <input type="text" biercode="soort" name="soort" required value="<?php echo $row['soort']; ?>"><br>
 
     <label for="stijl">stijl:</label>
-    <input type="number" biercode="stijl" name="stijl" required value="<?php echo $row['stijl']; ?>"><br>
+    <input type="text" biercode="stijl" name="stijl" required value="<?php echo $row['stijl']; ?>"><br>
+
+    <label for="alcohol">alcohol:</label>
+    <input type="text" biercode="alcohol" name="alcohol" required value="<?php echo $row['alcohol']; ?>"><br>
+
+    <label for="brouwcode">brouwcode:</label>
+    <input type="text" biercode="brouwcode" name="brouwcode" required value="<?php echo $row['brouwcode']; ?>"><br>
 
     <input type="submit" name="btn_wzg" value="Wijzig">
   </form>

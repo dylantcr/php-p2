@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: D.Mahn
 // functie: configuratiebestand
 
 //namen geven

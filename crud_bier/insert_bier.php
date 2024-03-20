@@ -1,6 +1,6 @@
 <?php
     // functie: formulier en database insert bier
-    // auteur: Wigmans
+    // auteur: Dmahn
 
     echo "<h1>Insert bier</h1>";
 
@@ -34,7 +34,19 @@
         <label for="alcohol">alcohol:</label>
         <input type="text" biercode="alcohol" name="alcohol" required><br>
 
-  
+        <?php
+dropDownbrouwer();
+?>
+  </select>
+<input type="submit" name="Submit" value="Submit">
+</form>
+
+<?php
+if(isset($_POST['Language'])) {
+  echo "Selected Language: ".htmlspecialchars($_POST['Language']);
+}
+?>
+
         <input type="submit" name="btn_ins" value="Insert">
         </form>
         
