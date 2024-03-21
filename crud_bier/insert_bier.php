@@ -34,20 +34,10 @@
         <label for="alcohol">alcohol:</label>
         <input type="text" biercode="alcohol" name="alcohol" required><br>
 
-        <?php
-dropDownbrouwer();
-?>
-  </select>
-<input type="submit" name="Submit" value="Submit">
-</form>
-
-<?php
-if(isset($_POST['Language'])) {
-  echo "Selected Language: ".htmlspecialchars($_POST['Language']);
-}
-?>
-
-        <input type="submit" name="btn_ins" value="Insert">
+    <?php
+    dropDownbrouwer();
+    ?>
+  <input type="submit" name="btn_ins" value="Insert">
         </form>
         
         <br><br>
