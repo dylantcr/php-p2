@@ -34,8 +34,10 @@
         <label for="alcohol">alcohol:</label>
         <input type="text" biercode="alcohol" name="alcohol" required><br>
 
-  
-        <input type="submit" name="btn_ins" value="Insert">
+    <?php
+    dropDownbrouwer();
+    ?>
+  <input type="submit" name="btn_ins" value="Insert">
         </form>
         
         <br><br>

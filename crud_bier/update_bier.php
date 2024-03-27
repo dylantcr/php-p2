@@ -49,8 +49,9 @@
     <label for="alcohol">alcohol:</label>
     <input type="text" biercode="alcohol" name="alcohol" required value="<?php echo $row['alcohol']; ?>"><br>
 
-    <label for="brouwcode">brouwcode:</label>
-    <input type="text" biercode="brouwcode" name="brouwcode" required value="<?php echo $row['brouwcode']; ?>"><br>
+    <?php
+    dropDownbrouwer();
+    ?>
 
     <input type="submit" name="btn_wzg" value="Wijzig">
   </form>

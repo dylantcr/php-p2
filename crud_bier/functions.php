@@ -251,6 +251,7 @@ function dropDownbrouwer(){
     $values = getData('brouwer');
    
     $text = "choose a brouwcode: <select name='brouwcode'>" ;
+    
        
         foreach ($values as $value) {
         $text .= "<option value='" . $value['brouwcode'] . "'>" . $value['naam'] . "</option>";
