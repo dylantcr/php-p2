@@ -210,7 +210,6 @@ function insertkroeg($post){
         ':naam'=>$_POST['naam'],
         ':adres'=>$_POST['adres'],
         ':plaats'=>$_POST['plaats'],
-
     ]);
 
     
