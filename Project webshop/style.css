@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.jpg'); /* Voeg de gewenste achtergrondafbeelding toe */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  
+  .title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out; /* Voeg fade-in animatie toe */
+  }
+  
+  .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out; /* Voeg fade-in animatie toe */
+  }
+  
+  #shop-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Voeg animatie toe aan de knop */
+  }
+  
+  #shop-btn:hover {
+    transform: scale(1.1); /* Voeg vergrotingseffect toe bij hover */
+  }
+  
+  .product-image {
+    margin-top: 50px;
+    animation: fadeInUp 1s ease-out; /* Voeg fade-in animatie toe */
+  }
+  
+  .product-img {
+    width: 300px; /* Pas de grootte aan zoals gewenst */
+    height: auto;
+  }
+  
+  /* Animaties */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
