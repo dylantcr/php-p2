@@ -1,6 +1,6 @@
 <?php
 //auteur: Dylan mahn
-// add_news_process.php
+//functie: news processen
 
 // Controleer of het formulier is ingediend
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
