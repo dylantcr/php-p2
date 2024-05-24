@@ -1,6 +1,7 @@
 <?php
- 
-// definitie van de class fruit
+
+//auteur: Dylan Mahn
+//definitie van de class fruit
 class Fruit{
   // properties
   public $name;
@@ -9,6 +10,10 @@ class Fruit{
   private $price;
  
   // methodes
+  public function __construct(){
+    echo "nieuwe object fruit aangemaakt<br>";
+  }
+
   public function setPrice($prijs) {
     $this->price = $prijs;
   }
@@ -17,10 +22,11 @@ class Fruit{
     return $this->price;
   }
 }
+//main
 
 // Maak een object apple op basis van de class fuit
 $appel = new Fruit();
- 
+
 // Vul de property name van het object
 $appel->name = "Elstar";
 $appel->color = "Roodgeel";
@@ -29,13 +35,13 @@ $appel->setPrice(1.50);
 //var_dump($apple);
 echo "De naam van het object is: " . $appel->name . "<br>";
 echo "De prijs van het object is: " . $appel->getprice() . "<br>";
- 
- 
+
+
 // Maak 2e object banaan
 $banaan = new Fruit ();
 $banaan ->name = "Banaan";
 $banaan ->color = "Yellow";
 
 var_dump ($banaan)
- 
+
 ?>
