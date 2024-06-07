@@ -21,7 +21,7 @@ function safeEval($expression) {
         return 'error';
     }
 }
- 
+
 // Haal de expressie op uit de POST data
 $data = json_decode(file_get_contents('php://input'), true);
 if (isset($data['expression'])) {
