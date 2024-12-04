@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Reacties Plaatsen</title>
+</head>
+<body>
+    <h1>Laat een reactie achter</h1>
+    <form action="verwerk_reactie.php" method="post">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="bericht">Bericht:</label><br>
+        <textarea id="bericht" name="bericht" rows="5" cols="40" required></textarea><br>
+
+        <input type="submit" value="Plaats reactie">
+    </form>
+</body>
+</html>

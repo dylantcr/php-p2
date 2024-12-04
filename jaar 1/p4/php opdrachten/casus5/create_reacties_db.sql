@@ -1,0 +1,11 @@
+CREATE DATABASE reacties_db;
+
+USE reacties_db;
+
+CREATE TABLE reacties (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    naam VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    bericht TEXT NOT NULL,
+    datum TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
