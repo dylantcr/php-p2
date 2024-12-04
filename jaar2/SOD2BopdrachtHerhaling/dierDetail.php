@@ -30,7 +30,7 @@ $dier = $stmt->fetch(PDO::FETCH_ASSOC);
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="kaart.php">Attracties</a></li>
+                <li><a href="kaart.php">Kaart</a></li>
                 <li><a href="dieren.php">Dieren</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
